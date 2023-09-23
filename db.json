@@ -1,0 +1,42 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "name": "admin",
+      "password": "admin123",
+      "email": "admin@gmail.com",
+      "gender": "male",
+      "id": 0
+    },
+    {
+      "name": "raxit",
+      "password": "raxit123",
+      "email": "raxitrangadiya8531@gmail.com",
+      "gender": "male",
+      "id": 1
+    },
+    {
+      "name": "nirali",
+      "password": "nirali123",
+      "email": "lakumnirali@gmail.com",
+      "gender": "male",
+      "id": 2
+    }
+  ]
+}
