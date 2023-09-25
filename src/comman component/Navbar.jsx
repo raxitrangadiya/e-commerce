@@ -7,49 +7,40 @@ import {
     MDBIcon,
     MDBNavbarNav,
     MDBNavbarItem,
-    // MDBNavbarLink,
-    MDBBtn,
-    // MDBDropdown,
-    // MDBDropdownToggle,
-    // MDBDropdownMenu,
-    // MDBDropdownItem,
     MDBCollapse,
+    MDBBtn,
 } from 'mdb-react-ui-kit';
-import { Link } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 
 export default function App() {
     const [showBasic, setShowBasic] = useState(false);
-    const [Menuitem, setMenuitem] = useState([]);
-    console.log("menu-item", Menuitem);
+    const [menuItems, setMenuItems] = useState([]);
+
     useEffect(() => {
         const GetMenu = async () => {
-            const reqData = await fetch('http://localhost:3004/menu')
-            const Resdata = await reqData.json()
-            setMenuitem(Resdata)
+            try {
+                const reqData = await fetch('http://localhost:3004/menu');
+                const Resdata = await reqData.json();
+                setMenuItems(Resdata);
+            } catch (error) {
+                console.error("Error fetching menu data:", error);
+            }
         }
         GetMenu();
-    }, [])
-    // Convert the Menuitem array into a single object
-    const menuObject = Menuitem.reduce((acc, item) => {
-        return { ...acc, ...item };
-      }, {});
+    }, []);
 
-
-console.log("menu objecr",menuObject);
-    // console.log("set menu item",setMenuitem);
-    // let DynemicMenu = Menuitem.map(([key, val], index) => {
-    //     return <MDBNavbarItem key={index}>
-    //         <Link className="nav-link" to={key}>{val}</Link>
-    //     </MDBNavbarItem>
-    // })
-    const MeniPrint = Object.entries(menuObject).map(([key, val]) => (
-        <MDBNavbarItem key={key}>
-          <Link className="nav-link" to={key}>
-            {val}
-          </Link>
-        </MDBNavbarItem>
-      ));
-
+    const renderMenuItems = () => {
+        const menuObject = menuItems.reduce((acc, item) => {
+            return { ...acc, ...item };
+        }, {});
+        return Object.entries(menuObject).map(([key, val]) => (
+            <MDBNavbarItem key={key}>
+                <NavLink className="nav-link active" to={key}>
+                    {val}
+                </NavLink>
+            </MDBNavbarItem>
+        ));
+    };
 
     return (
         <MDBNavbar sticky transparent expand='lg' bgColor='light'>
@@ -66,13 +57,7 @@ console.log("menu objecr",menuObject);
 
                 <MDBCollapse navbar show={showBasic}>
                     <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
-                        <MDBNavbarItem>
-                            <Link className='nav-link' to='/'>Home</Link>
-                        </MDBNavbarItem>
-                        <MDBNavbarItem>
-                            <Link className="nav-link" to='/login'>Login</Link>
-                        </MDBNavbarItem>
-                     {MeniPrint}
+                        {renderMenuItems()}
                     </MDBNavbarNav>
 
                     <form className='d-flex input-group w-auto'>

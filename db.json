@@ -16,12 +16,22 @@
   "profile": {
     "name": "typicode"
   },
-  "menu":[
-{"/aboutus":"About Us"},
-{"/contactus":"Contact us"},
-{"/api":"Api Example"},
-{"/Login":"Login"}
-],
+  "item": [
+    {
+      "adata": "data",
+      "any": "uygy"
+    }
+  ],
+  "menu": [
+    {
+      "/": "Home",
+      "/aboutus": "Aboutus",
+      "/contactus": "Contactus",
+      "/api": "Api",
+      "/login": "Login",
+      "/register": "Register"
+    }
+  ],
   "users": [
     {
       "name": "admin",
@@ -43,6 +53,127 @@
       "email": "lakumnirali@gmail.com",
       "gender": "male",
       "id": 2
+    },
+    {
+      "name": "wew",
+      "password": "qwqrr",
+      "email": "qwr@gmail.com",
+      "gender": "qwr",
+      "id": 3
+    },
+    {
+      "username": "qabexacin",
+      "email": "nebi@mailinator.com",
+      "password": "qypujupe",
+      "id": 4
+    },
+    {
+      "username": "nolib",
+      "email": "vyremux@mailinator.com",
+      "password": "hawebywo",
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "username": "xujenifyni",
+      "email": "dohekadal@mailinator.com",
+      "password": "gixexedy",
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "id": 16
+    },
+    {
+      "id": 17
+    },
+    {
+      "id": 18
+    },
+    {
+      "id": 19
+    },
+    {
+      "id": 20
+    },
+    {
+      "id": 21
+    },
+    {
+      "id": 22
+    },
+    {
+      "id": 23
+    },
+    {
+      "id": 24
+    },
+    {
+      "id": 25
+    },
+    {
+      "id": 26
+    },
+    {
+      "id": 27
+    },
+    {
+      "id": 28
+    },
+    {
+      "id": 29
+    },
+    {
+      "id": 30
+    },
+    {
+      "id": 31
+    },
+    {
+      "id": 32
+    },
+    {
+      "id": 33
+    },
+    {
+      "id": 34
+    },
+    {
+      "id": 35
+    },
+    {
+      "username": "sdf",
+      "email": "assf",
+      "password": "assff",
+      "id": 36
+    },
+    {
+      "id": 37
     }
   ]
 }
