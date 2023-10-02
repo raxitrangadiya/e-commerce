@@ -7,6 +7,7 @@ import Contactus from '../component/Contact us/Contactus.jsx'
 import Api from '../component/Api/Api.jsx'
 import Login from '../component/Login/MainLogin.jsx'
 import Register from '../component/Login/Register.jsx'
+import Admin from '../component/Admin/Adminpanel.jsx'
 const router= createBrowserRouter([
     {
         path: "/",
@@ -36,6 +37,11 @@ const router= createBrowserRouter([
         path:"/register",
         element:<><Register/></>
         
-    }
+    },
+    {
+        path:"/admindashboard",
+        element:<><Admin/></>
+        
+    },
 ])
 export default router
