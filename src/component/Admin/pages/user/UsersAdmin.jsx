@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Adminpanel = () => {
+const UsersAdmin = () => {
     return (
         <div>
-            admin panel
+            users
         </div>
     );
 };
 
-export default Adminpanel;
+export default UsersAdmin;

@@ -20,24 +20,29 @@ function App() {
     // toast("jghvghv")
     toast.success('Login succesfull',{
       position:toast.POSITION.TOP_CENTER,
-      autoClose:1000
+      autoClose:700
     })
     // console.log("toast done");
   } 
    const Login =async()=>{
-    axios.get(`http://localhost:3004/users?username=${formData.username}&password=${formData.password}`)
+   await  axios.get(`http://localhost:3004/users?username=${formData.username}&password=${formData.password}`)
     .then(function (response) {
       // handle succees
       if (response.data.length>0) {
-        setcooKie('role_id:',response.data[0].role_id);
+        setcooKie('role_id',response.data[0].role_id);
         setcooKie('user_id:',response.data[0].id);
         setcooKie('username:',response.data[0].username);
         setcooKie('mail_id:',response.data[0].email);
-        showToastMessage();
-        if (response.data[0].role_id==1) {
-          navigate("/admindashboard")
+         showToastMessage();
+         if (response.data[0].role_id==1) {
+        setTimeout(()=>{
+            navigate("/admin/dashboard")
+          },1500)
+          // navigate("/admindashboard")
         } else {
-          navigate("/")
+          setTimeout(()=>{
+            navigate("/")
+          },1500)
         }
         // console.log("data set succesful in cookies");
         // setLoginmsg(false)

@@ -10,7 +10,7 @@ import {
     MDBCollapse,
     MDBBtn,
 } from 'mdb-react-ui-kit';
-import {  NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function App() {
     const [showBasic, setShowBasic] = useState(false);
