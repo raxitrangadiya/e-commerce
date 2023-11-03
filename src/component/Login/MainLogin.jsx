@@ -36,7 +36,7 @@ function App() {
          showToastMessage();
          if (response.data[0].role_id==1) {
         setTimeout(()=>{
-            navigate("/admin/dashboard")
+            navigate("/admin/dashboard/admindashboard")
           },1500)
           // navigate("/admindashboard")
         } else {

@@ -35,40 +35,24 @@
     {
       "username": "admin",
       "password": "1",
-      "email": "admin@gmail.com",
+      "email": "lakumnirali@gmail.com",
       "gender": "male",
       "role_id": 1,
       "id": 0
     },
     {
-      "username": "raxit",
-      "password": "raxit123",
-      "email": "raxitrangadiya8531@gmail.com",
-      "gender": "male",
-      "role_id": 1,
-      "id": 1
-    },
-    {
-      "username": "nirali",
-      "password": "nirali123",
-      "email": "lakumnirali@gmail.com",
-      "gender": "male",
-      "role_id": 1,
-      "id": 2
-    },
-    {
-      "username": "test",
-      "email": "dedameta@gmailinator.com",
-      "password": "123",
-      "role_id": 2,
-      "id": 3
-    },
-    {
-      "username": "quxipis",
-      "email": "dyqerowexi@mailinator.com",
-      "password": "juzigaqa",
+      "username": "xocavyt",
+      "email": "gykadywy@mailinator.com",
+      "password": "niqypaku",
       "role_id": 2,
       "id": 4
+    },
+    {
+      "username": "nikhil",
+      "email": "nikhil@gmail.com",
+      "password": "syfugady",
+      "role_id": 2,
+      "id": 5
     }
   ]
 }
