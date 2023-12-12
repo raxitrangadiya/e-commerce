@@ -30,6 +30,7 @@ const UsersAdmin = () => {
         <td>{key}</td>
         <td>{val.username}</td>
         <td>{val.email}</td>
+        <td>{val.password}</td>
         <td>{val.role_id}</td>
         {/* <td>{val.id}</td> */}
         <td>
@@ -99,8 +100,9 @@ const UsersAdmin = () => {
         <MDBTableHead >
           <tr className='bg-secondary bg-gradient'>
             <th className='text-light  fw-bold' scope='col'>Sr.no</th>
-            <th className='text-light  fw-bold' scope='col'>Name</th>
+            <th className='text-light  fw-bold' scope='col'>Username</th>
             <th className='text-light  fw-bold' scope='col'>Email</th>
+            <th className='text-light  fw-bold' scope='col'>Password</th>
             <th className='text-light  fw-bold' scope='col'>role id</th>
             <th className='text-light  fw-bold' scope='col'>Action</th>
           </tr>
@@ -125,11 +127,18 @@ const UsersAdmin = () => {
                   <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
                 </MDBModalHeader>
                 <MDBModalBody>
-                  <MDBTable className='table-responsive-md' >
+                  <MDBTable className='table-responsive-sm' >
                     {/* {JSON.stringify(Update.username,Update.email)} */}
-                    <tr  >
-                      <td>  <MDBInput onChange={handleChange} onBlur={handleChange} label='Username' className='p-0' name='username' id='form1' type='text' /></td>
+                    <tr>
+                      <td>  <MDBInput onChange={handleChange} onBlur={handleChange} label='Username' className='p-0 ' name='username' id='form1' type='text' /></td>
                       <td>  <MDBInput className='p-0' onChange={handleChange} onBlur={handleChange} label='Email' id='typeEmail' name='email' type='email' /></td>
+
+                    </tr>
+                    <tr  >
+                      <td>  <MDBInput onChange={handleChange} onBlur={handleChange} label='Password' className='p-0' name='password' id='form1' type='text' /></td>
+                      <td >  <MDBInput className='p-0 form-control' min="1" max="2" onChange={handleChange} onBlur={handleChange} label='Role_id' id='roleid' name='role_id' type='number' />
+                      
+                      </td>
 
                     </tr>
                   </MDBTable>
